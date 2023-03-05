@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Mini Web Page</title>
+    <meta charset="UTF-8">
+    <style>
+      /* CSS styling */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color: #fafafa;
+        font-family: sans-serif;
+      }
+      header {
+        background-color: white;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      header h1 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      nav {
+        background-color: white;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      }
+      nav a {
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 0 20px;
+        line-height: 50px;
+        transition: background-color 0.2s ease-in-out;
+      }
+      nav a:hover {
+        background-color: #e6e6e6;
+      }
+      section {
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        margin-bottom: 30px;
+      }
+      section h2 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: color 0.2s ease-in-out;
+      }
+      section h2:hover {
+        color: #333;
+      }
+      section p {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+      }
+      .scroll-to-top {
+        background-color: #333;
+        border: none;
+        border-radius: 50%;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 50px;
+        height: 50px;
+        display: none;
+      }
+      .scroll-to-top img {
+        width: 100%;
+        height: 100%;
+      }
+      .scroll-to-top.show {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>My Mini Web Page</h1>
+      <a href="#">Login</a>
+    <div id="main-content">
+      <section class="content-section">
+    </header>
+
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Profile</a>
+      <a href="#">Settings</a>
+    </nav>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>반갑습니다. 연습용으로 만든 개인 오프라인 블로그입니다.</p>
+    </section>
+
+    <section>
+      <h2>My Hobbies</h2>
+      <p>동네 산책이나 국내 여행을 다니고 있습니다.</p>
+      <img src="https://via.placeholder.com/500x300" alt="Placeholder image">
+    </section>
+  </div>
+</section>
+
+<section class="content-section">
+  <h2 onclick="toggleContent('example')">여행 사진</h2>
+  <p id="example" class="hidden">
+  <img src="DSCF0879.jpg" alt="고양이1" style="width: 300px">
+  <img src="DSCN8850.jpg" alt="새1" style="width: 550px">
+</p>
+</section>
+
+<script>
+  function toggleContent(id) {
+    var element = document.getElementById(id);
+    element.classList.toggle("hidden");
+  }
+</script>
+
+<style>
+  .hidden {
+    display: none;
+  }
+</style>
+
+    <script>
+      function toggleContent(id) {
+        var content = document.getElementById(id);
+        content.classList.toggle('hidden'); // hidden 클래스를 추가하거나 제거함
+      }
+      function myFunction() {
+        alert("Hello, World!");
+      }
+    </script>
+  </body>
+
+<body>
+  <!-- 웹 페이지 내용 -->
+  <a href="#" class="scroll-to-top">
+  <img src="arrow-down-icon-5a3b5141d3eb53644480211513836865868.jpg" width="10">
+  </a>
+  <style>
+  .scroll-to-top {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 2.5px;
+  padding: 5px;
+}
+  </style>
+  <!-- 스크롤 관련 스크립트 -->
+  <script>
+    var scrollToTopBtn = document.querySelector('.scroll-to-top');
+    
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+
+</html>
